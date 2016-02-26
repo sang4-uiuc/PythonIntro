@@ -6,9 +6,9 @@ while True:
 	num = raw_input("Enter a number: ")
 	if num == "done" : break
 	try:
-		num = float(num)
+		num = int(num)
 	except:
-		print "Please enter a valid number!"
+		print "Invalid input"
 		continue
 
 	if smallest is None:
@@ -19,7 +19,6 @@ while True:
 		largest = num
 	elif num > largest:
 		largest = num
-	print num
 
-print "Maximum", largest
-print "Minimum", smallest
+print "Maximum is", largest
+print "Minimum is", smallest
